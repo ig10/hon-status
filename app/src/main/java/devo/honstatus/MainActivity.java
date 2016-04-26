@@ -14,8 +14,6 @@ import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity {
 
-    public static final String HON_API = 'http://api.heroesofnewerth.com';
-
     public String readAPI(String url) {
       StringBuilder sb = new StringBuilder();
       HttpClient client = new DefaultHttpClient();
@@ -38,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         // Match
         // Match History
         // Player Statistics
-        // new HoNURL();
+        // new HonURL();
         return readAPI(HON_API);
       }
 
