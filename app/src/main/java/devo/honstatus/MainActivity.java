@@ -11,11 +11,12 @@ import org.json.JSONObject;
 import android.support.v7.app.AppCompatActivity;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 
 public class MainActivity extends AppCompatActivity {
 
     public String readAPI(String url) {
-      StringBuilder sb = new StringBuilder();
+      String result;
       HttpClient client = new DefaultHttpClient();
       HttpGet get = new HttpGet(url);
 
@@ -24,20 +25,40 @@ public class MainActivity extends AppCompatActivity {
         StatusLine sl = response.getStatusLine();
         int statusCode = sl.getStatusCode();
 
+        if (statusCode == 200) {
+          result = processResponse(HttpResponse response);
+        } else {
+          Log.d("JSON", "Error - Status Code: [" + statusCode.toString() + "]");
+        }
+
       } catch (Exception e) {
-        // Error reading data from source
+        Log.d("APP", "Error: " + e.getLocalizedMessage());
       }
+
+      return result;
+    }
+
+    public String processResponse(HttpResponse response) {
+      StringBuilder stringBuilder = new StringBuilder();
+      HttpEntity entity = response.getEntity();
+      InputStream inputStream = entity.getContent();
+      BufferedReader reader = new BufferedReader(
+              new InputStreamReader(inputStream));
+      String line;
+
+      while ((line = reader.readLine()) != null) {
+          stringBuilder.append(line);
+      }
+      inputStream.close();
+
+      return stringBuilder.toString();
     }
 
     private class ReadHoNFeedTask extends AsyncTask <String, Void, String>{
 
-      protected String doInBackground(String type, String player_name) {
-        // Hero Statistics
-        // Match
-        // Match History
-        // Player Statistics
-        // new HonURL();
-        return readAPI(HON_API);
+      protected String doInBackground(String statsType, String gameType ,String player) {
+        HonURL builder = new HonURL(statsType, gameType, player);
+        return readAPI(builder.requestUrl());
       }
 
       protected void onPostExecute(String result) {
