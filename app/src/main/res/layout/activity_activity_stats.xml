@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="devo.honstatus.activity_stats">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CASUAL"
+        android:id="@+id/button"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:width="120dp"
+        android:height="50dp"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:textColor="#515151" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NORMAL"
+        android:id="@+id/button2"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:height="50dp"
+        android:width="120dp"
+        android:textColor="#515151"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PUBLIC"
+        android:id="@+id/button3"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:height="50dp"
+        android:width="120dp"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:textColor="#515151" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Nick Name:"
+        android:id="@+id/textView"
+        android:layout_below="@+id/button2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="23dp"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:textAlignment="center" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Kills:"
+        android:id="@+id/textView2"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:layout_marginTop="104dp"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Deaths:"
+        android:id="@+id/textView3"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentLeft="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Assists:"
+        android:id="@+id/textView4"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView3"
+        android:layout_alignParentLeft="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="K : D Ratio:"
+        android:id="@+id/textView5"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView4"
+        android:layout_alignParentLeft="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="K+A : D Ratio:"
+        android:id="@+id/textView12"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView5"
+        android:layout_alignParentLeft="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/lblKills"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:width="60dp"
+        android:layout_above="@+id/textView3"
+        android:layout_toRightOf="@+id/textView12"
+        android:layout_toEndOf="@+id/textView12"
+        android:textAlignment="center" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/lblDeaths"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:width="60dp"
+        android:layout_below="@+id/lblKills"
+        android:layout_alignLeft="@+id/lblKills"
+        android:layout_alignStart="@+id/lblKills"
+        android:textAlignment="center" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/lblAssists"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:width="60dp"
+        android:layout_below="@+id/lblDeaths"
+        android:layout_alignLeft="@+id/lblDeaths"
+        android:layout_alignStart="@+id/lblDeaths"
+        android:textAlignment="center" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/lblKd"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:width="60dp"
+        android:layout_below="@+id/lblAssists"
+        android:layout_toRightOf="@+id/textView12"
+        android:layout_toEndOf="@+id/textView12"
+        android:textAlignment="center" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/lblKad"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:width="60dp"
+        android:layout_below="@+id/lblKd"
+        android:layout_toRightOf="@+id/textView12"
+        android:layout_toEndOf="@+id/textView12"
+        android:textAlignment="center" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="MMR:"
+        android:id="@+id/textView6"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:layout_below="@+id/lblNick"
+        android:layout_alignRight="@+id/textView9"
+        android:layout_alignEnd="@+id/textView9" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/lblNick"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:width="60dp"
+        android:textAlignment="center"
+        android:layout_alignTop="@+id/textView"
+        android:layout_alignLeft="@+id/lblKills"
+        android:layout_alignStart="@+id/lblKills"
+        android:layout_toLeftOf="@+id/textView11"
+        android:layout_toStartOf="@+id/textView11" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Wins:"
+        android:id="@+id/textView9"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:layout_below="@+id/textView6"
+        android:layout_toLeftOf="@+id/lblWins"
+        android:layout_toStartOf="@+id/lblWins" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Losses:"
+        android:id="@+id/textView11"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:layout_below="@+id/textView9"
+        android:layout_toLeftOf="@+id/lblMmr"
+        android:layout_toStartOf="@+id/lblMmr" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/textView8"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:width="60dp"
+        android:textAlignment="center"
+        android:layout_below="@+id/lblLosses"
+        android:layout_toRightOf="@+id/button"
+        android:layout_marginLeft="21dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/lblLosses"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:width="60dp"
+        android:textAlignment="center"
+        android:layout_below="@+id/lblWins"
+        android:layout_toRightOf="@+id/button"
+        android:layout_marginLeft="21dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/lblWins"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:width="60dp"
+        android:textAlignment="center"
+        android:layout_below="@+id/lblMmr"
+        android:layout_toRightOf="@+id/button"
+        android:layout_marginLeft="21dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Winning %:"
+        android:id="@+id/textView14"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:layout_alignTop="@+id/textView8"
+        android:layout_toLeftOf="@+id/textView8"
+        android:layout_toStartOf="@+id/textView8" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/lblMmr"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:width="60dp"
+        android:textAlignment="center"
+        android:layout_alignTop="@+id/textView6"
+        android:layout_toRightOf="@+id/button"
+        android:layout_toEndOf="@+id/button"
+        android:layout_marginLeft="23dp"
+        android:layout_marginStart="23dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imgAvatar"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/button"
+        android:layout_above="@+id/lblKills"
+        android:layout_alignTop="@+id/textView6"
+        android:layout_toLeftOf="@+id/button" />
+
+</RelativeLayout>
